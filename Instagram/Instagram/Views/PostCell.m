@@ -35,27 +35,22 @@
     NSNumber* value = post[@"likeCount"];
 //    self.likes.text = post[@"likeCount"];
     self.likes.text = [[value stringValue] stringByAppendingString:@" likes"];
-    [post fetchIfNeededInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
 //    [post fetchIfNeeded];
-        self.postID = post.objectId;
-    }];
+//    self.postID = post.objectId;
+
+    PFUser * user = post[@"author"];
     
-
-        PFUser * user = post[@"author"];
-        NSString * userId = user.objectId;
-    [user fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
-        NSLog(@"%@", object[@"username"]);
-        self.user = object;
-        self.usernameTop.text = object[@"username"];
-        self.usernameBottom.text = object[@"username"];
-        self.profileImage.layer.cornerRadius = 13.0;
-        self.profileImage.clipsToBounds = YES;
-        NSLog(@"%@", object[@"profile_image"]);
-        PFFileObject * profileImage = object[@"profile_image"];
-        NSURL * imageURL = [NSURL URLWithString:profileImage.url];
-        [self.profileImage setImageWithURL:imageURL];
-    }];
-
+//    [user fetchIfNeeded];
+//    self.user = user;
+//    self.usernameTop.text = user.username;
+//    self.usernameBottom.text = user.username;
+//
+//    self.profileImage.layer.cornerRadius = 13.0;
+//    self.profileImage.clipsToBounds = YES;
+//    PFFileObject * profileImage = user[@"profile_image"];
+//    NSURL * imageURL = [NSURL URLWithString:profileImage.url];
+//    [self.profileImage setImageWithURL:imageURL];
+    
     NSString *dateString = post[@"dateStamp"];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     // Configure the input format to parse the date string
