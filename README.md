@@ -46,7 +46,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-![](https://github.com/elielvipata/FBUInstagram/blob/main/Instagram/Instagram/instagram.gif)
+![](https://github.com/elielvipata/FBUInstagram/blob/main/Instagram/instagram.gif)
 
 GIF created with [Kap](https://getkap.co/).
 
