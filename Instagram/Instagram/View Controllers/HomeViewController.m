@@ -78,6 +78,7 @@
         if (posts != nil) {
             // do something with the array of object returned by the call
             self.posts = posts;
+//            NSLog(@"%@", [self.posts count]);
             [self.tableView reloadData];
             [self.refreshControl endRefreshing];
 
@@ -109,8 +110,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     PostCell * cell = (PostCell *)[tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
     Post * post = self.posts[indexPath.row];
+    NSLog(@"%@", post[@"author"]);
     
     cell.post = post;
+    
     [cell setPost:post];
     cell.delegate = self;
 

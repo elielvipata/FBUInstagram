@@ -23,10 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UILabel *likes;
 @property (weak, nonatomic) IBOutlet UILabel *usernameBottom;
-@property (weak, nonatomic) Post * post;
+@property (strong, nonatomic) Post * post;
 @property (weak, nonatomic) NSString * postID;
 @property (nonatomic, weak) id<PostCellDelegate> delegate;
-@property (weak, nonatomic) PFUser * user;
+@property (strong, nonatomic) PFUser * user;
 
 
 - (void) didTapUserProfile:(UITapGestureRecognizer *)sender;

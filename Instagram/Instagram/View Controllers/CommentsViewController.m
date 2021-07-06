@@ -62,14 +62,15 @@
 -(void)filterComments{
     PFQuery *query = [PFQuery queryWithClassName:@"Comments"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *comments, NSError *error) {
-        [self.post fetchIfNeeded];
-        for(PFObject * comment in comments){
-            PFObject * current = comment[@"post"];
-            [current fetchIfNeeded];
-            if(![self.post.postID isEqualToString: current.objectId]){
-                [self.commentArray removeObject:comment];
+        [self.post fetchIfNeededInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+            for(PFObject * comment in comments){
+                PFObject * current = comment[@"post"];
+                [current fetchIfNeeded];
+                if(![self.post.postID isEqualToString: current.objectId]){
+                    [self.commentArray removeObject:comment];
+                }
             }
-        }
+        }];
     }];
 }
 

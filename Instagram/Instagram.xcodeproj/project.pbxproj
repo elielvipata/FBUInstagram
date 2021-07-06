@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0040B9862681674600503D81 /* instagram.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0040B9852681674600503D81 /* instagram.gif */; };
 		005B581E267A8B500071A32A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 005B581D267A8B500071A32A /* AppDelegate.m */; };
 		005B5821267A8B500071A32A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 005B5820267A8B500071A32A /* SceneDelegate.m */; };
 		005B5824267A8B500071A32A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005B5823267A8B500071A32A /* ViewController.m */; };
@@ -50,7 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0040B9852681674600503D81 /* instagram.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = instagram.gif; sourceTree = "<group>"; };
 		005B5819267A8B500071A32A /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		005B581C267A8B500071A32A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		005B581D267A8B500071A32A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 				005B581F267A8B500071A32A /* SceneDelegate.h */,
 				005B5820267A8B500071A32A /* SceneDelegate.m */,
 				005B5825267A8B500071A32A /* Main.storyboard */,
-				0040B9852681674600503D81 /* instagram.gif */,
 				005B5828267A8B550071A32A /* Assets.xcassets */,
 				005B582A267A8B550071A32A /* LaunchScreen.storyboard */,
 				005B582D267A8B550071A32A /* Info.plist */,
@@ -364,7 +361,6 @@
 				005B582C267A8B550071A32A /* LaunchScreen.storyboard in Resources */,
 				005B5829267A8B550071A32A /* Assets.xcassets in Resources */,
 				005B5827267A8B500071A32A /* Main.storyboard in Resources */,
-				0040B9862681674600503D81 /* instagram.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

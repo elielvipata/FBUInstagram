@@ -38,15 +38,17 @@
 
 -(void)fetchUserData{
     PFUser * user= self.user;
-    [user fetchIfNeeded];
-    self.fullNameLabel.text = user[@"fullname"];
-    self.bioLabel.text = user[@"bio"];
-    
-    self.profileImage.layer.cornerRadius = 55.0;
-    self.profileImage.clipsToBounds = YES;
-    PFFileObject * image = user[@"profile_image"];
-    NSURL * urlString = [NSURL URLWithString:image.url];
-    [self.profileImage setImageWithURL:urlString];
+    [user fetchIfNeededInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+        self.fullNameLabel.text = user[@"fullname"];
+        self.bioLabel.text = user[@"bio"];
+        
+        self.profileImage.layer.cornerRadius = 55.0;
+        self.profileImage.clipsToBounds = YES;
+        PFFileObject * image = user[@"profile_image"];
+        NSURL * urlString = [NSURL URLWithString:image.url];
+        [self.profileImage setImageWithURL:urlString];
+    }];
+
 }
 
 -(void)getPostData{

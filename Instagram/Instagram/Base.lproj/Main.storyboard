@@ -130,7 +130,7 @@
                                                         <constraint firstAttribute="height" constant="27" id="DRL-Fz-LrK"/>
                                                         <constraint firstAttribute="width" constant="27" id="WTk-gR-Igf"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="llike-button"/>
+                                                    <state key="normal" title="Button" image="like-button"/>
                                                     <connections>
                                                         <action selector="onLikeButton:" destination="Eok-GA-YdX" eventType="touchUpInside" id="SRS-eR-9kB"/>
                                                     </connections>
@@ -1069,7 +1069,7 @@
         <image name="feed_tab" width="25" height="25"/>
         <image name="goku" width="1280" height="720"/>
         <image name="insta_camera_btn" width="25" height="25"/>
-        <image name="llike-button" width="512" height="512"/>
+        <image name="like-button" width="512" height="512"/>
         <image name="logo-image" width="2560" height="914"/>
         <image name="logo-image-2" width="154" height="55"/>
         <image name="profile_tab" width="25" height="25"/>
