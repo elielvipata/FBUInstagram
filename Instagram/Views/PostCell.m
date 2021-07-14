@@ -35,11 +35,9 @@
     NSNumber* value = post[@"likeCount"];
 //    self.likes.text = post[@"likeCount"];
     self.likes.text = [[value stringValue] stringByAppendingString:@" likes"];
-    [post fetchIfNeeded];
     self.postID = post.objectId;
 
     PFUser * user = post[@"author"];
-    [user fetchIfNeeded];
     self.user = user;
     self.usernameTop.text = user.username;
     self.usernameBottom.text = user.username;

@@ -37,7 +37,7 @@
     self.tableView.refreshControl = self.refreshControl;
     [self.activityIndicator startAnimating];
     
-    [self getPosts:20];
+    [self getPosts];
     
     [self.activityIndicator stopAnimating];
     
@@ -68,10 +68,12 @@
 }
 
 
--(void)getPosts:(int) limit{
+-(void)getPosts{
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
-    query.limit = limit;
+    query.limit = 20;
+    query.skip = self.posts.count;
     [query orderByDescending:@"createdAt"];
+    [query includeKey:@"author"];
 
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
@@ -91,6 +93,8 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     query.limit = 20;
     [query orderByDescending:@"createdAt"];
+    [query includeKey:@"author"];
+
 
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
@@ -111,7 +115,6 @@
     Post * post = self.posts[indexPath.row];
     
     cell.post = post;
-    [cell setPost:post];
     cell.delegate = self;
 
     
@@ -132,12 +135,12 @@
     }];
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.row + 1 == [self.posts count]){
-        [self getPosts:[self.posts count] + 20];
-        [self.tableView reloadData];
-    }
-}
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+//    if(indexPath.row + 1 == [self.posts count]){
+//        [self getPosts];
+//        [self.tableView reloadData];
+//    }
+//}
 
 - (void)postCell:(PostCell *)postCell didTap:(PFUser *)user{
     [self performSegueWithIdentifier:@"userProfileSegue" sender:user];

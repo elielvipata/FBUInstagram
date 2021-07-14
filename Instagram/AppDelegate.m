@@ -21,8 +21,8 @@
     
             ParseClientConfiguration *config = [ParseClientConfiguration   configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
 
-                configuration.applicationId = @"CR0kXsUVnyuLkIEi57cLT0TO942JIdyyXeFsoCrf"; // <- UPDATE
-                configuration.clientKey = @"2MMApGErhwCxUmGPNUub10sMG6U7f32V6FKLY8Mo"; // <- UPDATE
+                configuration.applicationId = @"OyNbnHe2HjQZ0IKmk7UpHqc4icAGUDfH6GoVvRye"; // <- UPDATE
+                configuration.clientKey = @"M4xJSiEMkI2MxWnodWJ403NOxFe6J9EVu6rm8b3e"; // <- UPDATE
                 configuration.server = @"https://parseapi.back4app.com";
             }];
 
